@@ -16,7 +16,6 @@ sleep 5
 
 if command -v open 2>&1 /dev/null
 then
-  echo "Found 'open' command"
   open ${URL}
 elif command -v xdg-open 2>&1 /dev/null
 then
