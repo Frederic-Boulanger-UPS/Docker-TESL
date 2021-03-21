@@ -4,6 +4,8 @@ RUN apt-get update -y ; \
     apt-get upgrade -y ; \
     apt-get install openjdk-11-jdk -y
 
+RUN apt autoremove && apt autoclean
+
 COPY resources/eclipse-tesl-2020-06.tgz /usr/local/
 
 RUN cd /usr/local ; tar zxf eclipse-tesl-2020-06.tgz && \
